@@ -14,10 +14,13 @@ const assertEqual = function(actual, expected) {
 
 const tail = (array) => {
 
-  tailArray = array.slice(1);
+  const tailArray = array.slice(1);
 
   return tailArray;
 
 };
 
-console.log(assertEqual(tail([1, 2, 3, 4, 5]).toString(), '2,3,4,5'));
+
+
+console.log(assertEqual(tail([1,2,3]).length, 2));
+console.log(assertEqual(tail(['one', 'bear', 'headache'])[1], 'headache'));
