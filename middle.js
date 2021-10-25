@@ -1,3 +1,5 @@
+//TESTING FUNCTIONS
+
 const eqArrays = (array1, array2) => {
 
   if (Array.isArray(array1) && Array.isArray(array2)) {
@@ -31,7 +33,7 @@ const eqArrays = (array1, array2) => {
 
 const assertArraysEqual = (actual, expected) => {
 
-  if (eqArrays(actual, expected) === true) {
+  if (eqArrays(actual, expected)) {
 
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
 
@@ -43,27 +45,11 @@ const assertArraysEqual = (actual, expected) => {
 
 };
 
-  for (let i = 0; i < array1.length; i++) {
-
-    if (array1[i] !== array2[i]) {
-
-      console.log(`🛑 Assertion Failed: ${array1} !== ${array2}`);
-
-      return;
-
-    } 
-
-  }
-
-  console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
-
-}
-
-
+//MIDDLE FUNCTION
 
 const middle = (array) => {
 
-  let newArray = '';
+  let newArray = [];
 
   let i = 0;
 
@@ -74,11 +60,26 @@ const middle = (array) => {
   } else if (array.length % 2 === 0) {
 
     i = array.length / 2 - 1;
+
+    newArray.push(array[i], array[i + 1]);
   
   } else {
 
-    i = Math.round(array.length / 2);
+    i = Math.floor(array.length / 2);
+
+    newArray.push(array[i])
 
   }
+
+  return newArray;
+
 }
+
+//TEST CODE
+
+assertArraysEqual(middle([1,2,3,4,5]), [3]);
+assertArraysEqual(middle([1,2,3,4]), [2,3]);
+assertArraysEqual(middle(['words']), []);
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1,2]), []);
 
