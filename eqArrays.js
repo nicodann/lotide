@@ -14,6 +14,8 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = (array1, array2) => {
 
+  if (Array.isArray(array1) && Array.isArray(array2)) {
+
     if (array1.length !== array2.length) {
 
       return false;
@@ -21,6 +23,8 @@ const eqArrays = (array1, array2) => {
     }
 
     for (let i = 0; i < array1.length; i++) {
+
+      // console.log(array1[i], array2[i]);
 
       if (array1[i] !== array2[i]) {
 
@@ -31,6 +35,11 @@ const eqArrays = (array1, array2) => {
     }
 
     return true;
+
+  } else {
+
+    return 'Input is not an Array';
+  }
 
 }
 
