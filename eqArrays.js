@@ -30,7 +30,7 @@ const eqArrays = (array1, array2) => {
 
         return false;
 
-      } 
+      }
 
     }
 
@@ -38,10 +38,10 @@ const eqArrays = (array1, array2) => {
 
   } else {
 
-    return 'Input is not an Array';
+    console.log('Input is not an Array');
   }
 
-}
+};
 
 
 

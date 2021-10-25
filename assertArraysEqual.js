@@ -16,7 +16,7 @@ const eqArrays = (array1, array2) => {
 
         return false;
 
-      } 
+      }
 
     }
 
@@ -24,10 +24,10 @@ const eqArrays = (array1, array2) => {
 
   } else {
 
-    return 'Input is not an Array';
+    console.log('Input is not an Array');
   }
 
-}
+};
 
 const assertArraysEqual = (actual, expected) => {
 
@@ -41,11 +41,11 @@ const assertArraysEqual = (actual, expected) => {
 
   }
 
-}
+};
 
 assertArraysEqual([1,2,3], [1,2,3]);
 assertArraysEqual(['twenty', 5], [1,2]);
-assertArraysEqual(3,4)
+assertArraysEqual(3,4);
 
 // const assertArraysEqual = (array1, array2) => {
 
@@ -65,7 +65,7 @@ assertArraysEqual(3,4)
 
 //       return;
 
-//     } 
+//     }
 
 //   }
 
