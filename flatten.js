@@ -1,3 +1,5 @@
+// FOR TESTING
+
 const assertArraysEqual = (array1, array2) => {
 
   if (array1.length !== array2.length) {
@@ -23,4 +25,36 @@ const assertArraysEqual = (array1, array2) => {
   console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
 
 }
+
+//FLATTEN FUNCTION
+
+const flatten = (array) => {
+
+  let flatArray = [];
+
+  for (let element of array) {
+
+    if (Array.isArray(element)) {
+
+      for (let item of element) {
+
+        flatArray.push(item);
+
+      }
+
+    } else {
+
+      flatArray.push(element);
+    
+    }
+
+  }
+
+  return flatArray;
+
+}
+
+assertArraysEqual([-1,22,12,3,7], flatten([[-1,22,[12,3],7]]))
+
+
 
