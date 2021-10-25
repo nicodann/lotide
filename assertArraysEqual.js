@@ -4,6 +4,8 @@ const assertArraysEqual = (array1, array2) => {
 
     console.log(`🛑 Assertion Failed: ${array1} !== ${array2}`);
 
+    return;
+
   }
 
   for (let i = 0; i < array1.length; i++) {
@@ -21,7 +23,3 @@ const assertArraysEqual = (array1, array2) => {
   console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
 
 }
-
-assertArraysEqual([1,2,3,4], ['1',2,3, 4]);
-
-
