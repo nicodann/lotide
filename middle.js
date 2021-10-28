@@ -67,13 +67,13 @@ const middle = (array) => {
 
     i = Math.floor(array.length / 2);
 
-    newArray.push(array[i])
+    newArray.push(array[i]);
 
   }
 
   return newArray;
 
-}
+};
 
 //TEST CODE
 

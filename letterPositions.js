@@ -57,11 +57,11 @@ const letterPositions = function(sentence) {
       
       if (results[sentence[i]]) {
         
-          results[sentence[i]].push(i);
+        results[sentence[i]].push(i);
         
-        } else {
+      } else {
           
-          results[sentence[i]] = [i];
+        results[sentence[i]] = [i];
 
       }
 

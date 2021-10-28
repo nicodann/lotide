@@ -24,33 +24,33 @@ const countLetters = (string) => {
 
   let tally = {};
 
-    for (letter of string) {
+  for (let letter of string) {
 
-      if (letter !== " ") {
+    if (letter !== " ") {
 
-        if (tally[letter]) {
+      if (tally[letter]) {
 
-          tally[letter] += 1;
+        tally[letter] += 1;
 
-        } else {
+      } else {
 
-          tally[letter] = 1;
-
-        }
+        tally[letter] = 1;
 
       }
-      
+
     }
+    
+  }
   
   return tally;
 
-}
+};
 
 // const result = countLetters('mir');
 
 console.log(countLetters('mir')['m']);
 
-assertEqual(countLetters('mir')['m'], 1) ;
-assertEqual(countLetters('51t5')['5'], 2) ;
-assertEqual(countLetters('Mr. Potato')['t'], 2) ;
-assertEqual(countLetters('   I   tell')['I'], 1) ;
+assertEqual(countLetters('mir')['m'], 1);
+assertEqual(countLetters('51t5')['5'], 2);
+assertEqual(countLetters('Mr. Potato')['t'], 2);
+assertEqual(countLetters('   I   tell')['I'], 1);

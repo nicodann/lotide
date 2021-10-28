@@ -51,7 +51,7 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 
 
-}
+};
 
 //TEST CASES
 
