@@ -1,52 +1,3 @@
-//TESTING FUNCTIONS
-
-const eqArrays = (array1, array2) => {
-
-  if (Array.isArray(array1) && Array.isArray(array2)) {
-
-    if (array1.length !== array2.length) {
-
-      return false;
-  
-    }
-
-    for (let i = 0; i < array1.length; i++) {
-
-      // console.log(array1[i], array2[i]);
-
-      if (array1[i] !== array2[i]) {
-
-        return false;
-
-      }
-
-    }
-
-    return true;
-
-  } else {
-
-    console.log('Input is not an Array');
-  }
-
-};
-
-const assertArraysEqual = (actual, expected) => {
-
-  if (eqArrays(actual, expected)) {
-
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-
-  } else {
-
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-
-  }
-
-};
-
-//MIDDLE FUNCTION
-
 const middle = (array) => {
 
   let newArray = [];
@@ -75,11 +26,4 @@ const middle = (array) => {
 
 };
 
-//TEST CODE
-
-assertArraysEqual(middle([1,2,3,4,5]), [3]);
-assertArraysEqual(middle([1,2,3,4]), [2,3]);
-assertArraysEqual(middle(['words']), []);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1,2]), []);
-
+module.exports = middle;
