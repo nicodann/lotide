@@ -1,17 +1,16 @@
-const assertEqual = function(actual, expected) {
+// const assertEqual = function(actual, expected) {
 
-  if (actual === expected) {
+//   if (actual === expected) {
 
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+//     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
 
-  } else {
+//   } else {
     
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
+//     console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
 
-  }
+//   }
 
-};
-
+// };
 const tail = (array) => {
 
   const tailArray = array.slice(1);
@@ -22,5 +21,5 @@ const tail = (array) => {
 
 
 
-console.log(assertEqual(tail([1,2,3]).length, 2));
-console.log(assertEqual(tail(['one', 'bear', 'headache'])[1], 'headache'));
+
+module.exports = tail;
