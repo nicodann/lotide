@@ -1,47 +1,47 @@
 //TESTING
 
-const eqArrays = (array1, array2) => {
+// const eqArrays = (array1, array2) => {
 
-  if (Array.isArray(array1) && Array.isArray(array2)) {
+//   if (Array.isArray(array1) && Array.isArray(array2)) {
 
-    if (array1.length !== array2.length) {
+//     if (array1.length !== array2.length) {
 
-      return false;
+//       return false;
   
-    }
+//     }
 
-    for (let i = 0; i < array1.length; i++) {
+//     for (let i = 0; i < array1.length; i++) {
 
-      if (array1[i] !== array2[i]) {
+//       if (array1[i] !== array2[i]) {
 
-        return false;
+//         return false;
 
-      }
+//       }
 
-    }
+//     }
 
-    return true;
+//     return true;
 
-  } else {
+//   } else {
 
-    console.log('Input is not an Array');
-  }
+//     console.log('Input is not an Array');
+//   }
 
-};
+// };
 
-const assertArraysEqual = (actual, expected) => {
+// const assertArraysEqual = (actual, expected) => {
 
-  if (eqArrays(actual, expected)) {
+//   if (eqArrays(actual, expected)) {
 
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
+//     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
 
-  } else {
+//   } else {
 
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
+//     console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
 
-  }
+//   }
 
-};
+// };
 
 
 //TAKEUNTIL FUNcTION
@@ -71,6 +71,8 @@ const takeUntil = (array, callback) => {
 
 };
 
+module.exports = takeUntil;
+
 //TESTs
 
 // const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
@@ -87,13 +89,13 @@ const takeUntil = (array, callback) => {
 
 // console.log(assertArraysEqual(results1, [1,2,5,7,2]))
 
-const data3 = [1,2,3];
-const results3 = takeUntil(data3, x => x === undefined);
-console.log(results3);
-console.log(assertArraysEqual(results3, [1,2]));
+// const data3 = [1,2,3];
+// const results3 = takeUntil(data3, x => x === undefined);
+// console.log(results3);
+// console.log(assertArraysEqual(results3, [1,2]));
 
-const data4 = ["pig", "elephant","","roger"];
-const results4 = takeUntil(data4, x => x === "");
-console.log(results4);
-console.log(assertArraysEqual(results4, ["pig","elephant"]));
+// const data4 = ["pig", "elephant","","roger"];
+// const results4 = takeUntil(data4, x => x === "");
+// console.log(results4);
+// console.log(assertArraysEqual(results4, ["pig","elephant"]));
 
