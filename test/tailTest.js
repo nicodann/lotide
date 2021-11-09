@@ -3,7 +3,7 @@ const { assert } = require('chai');
 
 describe('#tail', () => {
 
-  it ("should return 3 if given [1,2,3]", () => {
+  it("should return 3 if given [1,2,3]", () => {
    
     assert.deepEqual(tail([1,2,3]), [3]);
   });

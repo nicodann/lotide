@@ -59,7 +59,7 @@ const takeUntil = (array, callback) => {
 
   let results = [];
 
-  for (item of array) {
+  for (const item of array) {
 
     if (callback(item) === false) {
       results.push(item);
@@ -87,7 +87,7 @@ const takeUntil = (array, callback) => {
 
 // console.log(assertArraysEqual(results1, [1,2,5,7,2]))
 
-const data3 = [1,2,,3];
+const data3 = [1,2,3];
 const results3 = takeUntil(data3, x => x === undefined);
 console.log(results3);
 console.log(assertArraysEqual(results3, [1,2]));

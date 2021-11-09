@@ -1,12 +1,5 @@
 const middle = require('../middle');
-// const assertArraysEqual = require('../assertArraysEqual');
 const {assert} = require('chai');
-
-// assertArraysEqual(middle([1,2,3,4,5]), [3]);
-// assertArraysEqual(middle([1,2,3,4]), [2,3]);
-// assertArraysEqual(middle(['words']), []);
-// assertArraysEqual(middle([1]), []);
-// assertArraysEqual(middle([1,2]), []);
 
 describe('#middle', () => {
   it('should return [3] if passed [1,2,3,4,5]', () => {

@@ -49,7 +49,7 @@ const assertArraysEqual = (actual, expected) => {
 
 const map = (array,callback) => {
   
-  console.log("array:",array,"callback:", callback)
+  console.log("array:",array,"callback:", callback);
 
   let results = [];
 
