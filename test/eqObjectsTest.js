@@ -36,6 +36,24 @@ describe("#eqObjects", () => {
     assert.deepEqual(eqObjects(cd, cd2),false);
   });
 
+  it("should return true if given two Object with equal key/value pairs, including nested objects", () => {
+    assert.deepEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+  });
+
+  it("should return false if given two unequal Objects that include nested objects", () => {
+    assert.deepEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
+  });
+
+  it("should return false if given two unequal objects, one containing nested obejects", () => {
+    assert.deepEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
+  });
+
+  const nested = { a:"1",b: { c:"2",d: { e:"3",f:"4" } ,g:"1" } ,h:"2"};
+  const nested1 = { ted:"1", frank: {allison: "5",jim: { earl: "7"} } };
+  it("should return false if given two unequal objects, containing multiple levels of nested obejects", () => {
+    assert.deepEqual(eqObjects(nested,nested1), false);
+  });
+
 });
 
 

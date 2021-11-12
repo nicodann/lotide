@@ -1,6 +1,6 @@
 {
   "name": "@nicodann/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A js library based on lodash created as an educational project through Lighthouse Labs",
   "keywords": "js library lodash educational Lighthouse Labs student javascript lotide nico dann nicodann",
   "main": "index.js",
