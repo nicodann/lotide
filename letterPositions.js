@@ -25,7 +25,3 @@ const letterPositions = function(sentence) {
 };
 
 module.exports = letterPositions;
-
-console.log((letterPositions('aabb'))); //[0,1]
-console.log((letterPositions('1 2 3 3')));//[2]
-console.log((letterPositions('Ttk K')));//[4]

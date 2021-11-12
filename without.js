@@ -1,10 +1,3 @@
-// Accept two arrays as inputs: array1, array2
-// define newArray
-// push items from array1 to newArray if they don't exist in array2
-// iterate through source
-// for each itme in source iterate through array2
-
-
 const without = (source, itemsToRemove) => {
 
   let newArray = [];
@@ -32,8 +25,3 @@ const without = (source, itemsToRemove) => {
 };
 
 module.exports = without;
-
-// without([1, 2, 3], [1]); // => [2, 3]
-// without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-
-// assertArraysEqual(without([5, 'dog', 8, 5], [8]), [5, 'dog']);

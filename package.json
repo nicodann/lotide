@@ -1,8 +1,9 @@
 {
   "name": "@nicodann/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A js library based on lodash created as an educational project through Lighthouse Labs",
-  "main": "assertArraysEqual.js",
+  "keywords": "js library lodash educational Lighthouse Labs student javascript lotide nico dann nicodann",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

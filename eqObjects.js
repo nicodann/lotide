@@ -1,53 +1,4 @@
-//TESTING FUNCTIONS
-
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-
-  } else {
-    
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-
-  }
-
-};
-
-const eqArrays = (array1, array2) => {
-
-  if (Array.isArray(array1) && Array.isArray(array2)) {
-
-    if (array1.length !== array2.length) {
-
-      return false;
-  
-    }
-
-    for (let i = 0; i < array1.length; i++) {
-
-      // console.log(array1[i], array2[i]);
-
-      if (array1[i] !== array2[i]) {
-
-        return false;
-
-      }
-
-    }
-
-    return true;
-
-  } else {
-
-    console.log('Input is not an Array');
-  }
-
-};
-
-// EQOBJECTS FUNCTION
-
-// THEIR SOLUTION
+const eqArrays = require('./eqArrays');
 
 const eqObjects = (object1, object2) => {
 
@@ -74,12 +25,12 @@ const eqObjects = (object1, object2) => {
   }
 
   return true;
-  
-  
 
 };
 
-// MY SOLUTION
+module.exports = eqObjects;
+
+// ALT
 
 // const eqObjects = (object1, object2) => {
 
@@ -107,30 +58,3 @@ const eqObjects = (object1, object2) => {
 //   return true;
 
 // }
-
-//TEST CASES
-
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// assertEqual(eqObjects(ab, ba), true);
-
-
-
-// const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false);
-
-
-// assertEqual(eqObjects(abc, ab), false);
-
-// const d = {d:5};
-// const e = {e:6};
-// assertEqual(eqObjects(d,e), false);
-
-// assertEqual(eqObjects(d,ab), false)
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc),true);
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2),false);
